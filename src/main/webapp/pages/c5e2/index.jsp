@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <title>Murach's Java Servlets and JSP</title>
 <link rel="stylesheet" href="/WebProgramming/resources/styles/ex.css">
-<%@ include file="/layouts/header.jsp" %>
 <link rel="stylesheet" href="/WebProgramming/resources/styles/layout.css">
 </head>
 <body>

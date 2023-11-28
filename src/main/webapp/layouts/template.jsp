@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="/WebProgramming/resources/styles/ex.css">
 </head>
 <body>
-	<jsp:include page="header.jsp" />
 	<div class="content">
 		<jsp:include page="/pages/${param.page}.jsp" />
 	</div>

@@ -5,7 +5,6 @@
 <title>Murach's Java Servlets and JSP</title>
 <link rel="stylesheet" href="/WebProgramming/resources/styles/ex.css">
 <link rel="stylesheet" href="/WebProgramming/resources/styles/layout.css">
-<%@ include file="/layouts/header.jsp" %>
 </head>
 <body>
 	<form action="" method="post">

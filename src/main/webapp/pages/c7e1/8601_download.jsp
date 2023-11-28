@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="/WebProgramming/resources/styles/ex.css">
 </head>
 <body>
-	<jsp:include page="/layouts/header.jsp" />
 	<div class="content">
 		<div class="centerDiv">
 			<h1>Downloads</h1>

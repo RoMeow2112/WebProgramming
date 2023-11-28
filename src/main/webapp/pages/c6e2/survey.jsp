@@ -8,7 +8,6 @@
 </head>
 
 <body>
-	<jsp:include page="/layouts/header.jsp" />
 	<div class="centerDiv">
 		<h1>Thanks for taking our survey!</h1>
 

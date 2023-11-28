@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="/WebProgramming/resources/styles/ex.css">
 </head>
 <body>
-	<jsp:include page="/layouts/header.jsp" />
 	<div class="content">
 		<div class="centerDiv">
 			<h1>Downloads</h1>
@@ -27,7 +26,7 @@
 				<tr>
 					<td>Whiskey Before Breakfast</td>
 					<td>
-						<a href="/WebProgramming/musicStore/sound/${productCode}/whiskey.mp3">MP3</a>
+						<a href="/WebProgramming/musicStore/sound/${productCode}/star.mp3">MP3</a>
 					</td>
 				</tr>
 			</table>
