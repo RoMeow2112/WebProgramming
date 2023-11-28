@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Page Title</title>
+<link rel="stylesheet" href="/WebProgramming/resources/styles/layout.css">
+<link rel="stylesheet" href="/WebProgramming/resources/styles/ex.css">
+</head>
+<body>
+	<jsp:include page="/layouts/header.jsp" />
+	<div class="content">
+		<div class="centerDiv">
+			<h1>Your cart</h1>
+			<table>
+				<tr>
+					<th>Quantity</th>
+					<th>Description</th>
+					<th>Price</th>
+					<th>Amount</th>
+					<th></th>
+				</tr>
+				<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+				<c:forEach var="item" items="${cart.items}">
+					<tr>
+						<td>
+							<form action="/WebProgramming/api/chap7cart" method="post">
+								<input type="hidden" name="productCode" value="${item.product.code}">
+								<input type=text name="quantity" value="${item.quantity}" id="quantity" style="width: 5rem; text-align: center;">
+								<input type="submit" value="Update">
+							</form>
+						</td>
+						<td>${item.product.description}</td>
+						<td>${item.product.priceCurrencyFormat}</td>
+						<td>${item.totalCurrencyFormat}</td>
+						<td>
+							<a href="/WebProgramming/api/chap7cart?productCode=${item.product.code}&amp;quantity=0">Remove Item</a>
+						</td>
+					</tr>
+				</c:forEach>
+			</table>
+			<p>
+				<b>To change the quantity</b>
+				, enter the new quantity and click on the Update button.
+			</p>
+			<form action="/WebProgramming/pages/c7e3/index.jsp" method="post">
+				<input type="hidden" name="action" value="shop">
+				<input type="submit" value="Continue Shopping">
+			</form>
+			<form action="/WebProgramming/pages/c7e3/checkout.jsp" method="post">
+				<input type="hidden" name="action" value="checkout">
+				<input type="submit" value="Checkout">
+			</form>
+		</div>
+	</div>
+	<jsp:include page="/layouts/footer.jsp" />
+</body>
+</html>
